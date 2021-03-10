@@ -1,1 +1,1 @@
-# battleshitPair
+# battleshipPair
