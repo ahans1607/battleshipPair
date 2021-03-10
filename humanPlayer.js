@@ -15,16 +15,25 @@ class HumanPlayer {
     // TODO: Ask the user for their move and process the answer using the rl
     // interface.Invoke the callback function (processMove), passing in
     // the given answer in the form of an array representing [row, col]
-    readline.Interface.processMove(answer)
     this.rl.question('what?', answer => {
-      // do something with the answer
-      // this.rl.close()...to close the readline interface
+      const [row, col] = answer.split(",");
+      processMove([row, col])  // do something with the answer
+
+      
     })
   }
 
   processGameOver(isWon) {
+    if (isWon == true){
+      console.log("You are a winner!");
+    } else {
+      console.log("You are a loser :(")
+    }
     // TODO: Display a different message depending on if the player won or lost
-    // the game. Close the rl interface.
+    // the game. Close the rl interface.      
+    
+    this.rl.close() //...to close the readline interface
+
   }
 }
 

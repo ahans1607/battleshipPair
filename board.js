@@ -1,8 +1,12 @@
 class Board {
   constructor() {
     // TODO: Set up constructor that sets the numRos, numCols, and numShips.
+    this.numRos = numRos;
+    this.numCols = numCols;
+    this.numShips = numShips;
     // TODO: Set this.grid equal to the return value of the instance method
     // populateGrid().
+    this.grid = this.populateGrid()
   }
 
   populateGrid() {
